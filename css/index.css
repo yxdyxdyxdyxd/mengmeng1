@@ -1,0 +1,122 @@
+body,div,p,ul,ol,li,dl,dt,dd,table,tr,td,form,hr,fieldset,h1,h2,h3,h4,h5,h6,img,input{
+    margin:0;
+    padding:0;
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+body {
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    /*防止出现向下滚动条*/
+    overflow: hidden;
+    /* background: url('../images/9.jpg') no-repeat center center fixed; */
+}
+.content{
+    width: 200px;
+    height: 50px;
+    position: relative;
+    margin:200px auto 0;
+    perspective: 1500px;
+}
+.box{
+    width: 200px;
+    height: 150px;
+    transform-style: preserve-3d;
+    transform:rotateX(-30deg);
+    animation:photo 15s linear infinite;
+}
+.box:hover{
+    animation:photo 15s linear infinite paused;
+}
+.box img{
+    width: 235px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-style: preserve-3d;
+    transition: all 1s;
+}
+.box img:nth-child(1){
+    transform:rotateY(20deg) translateZ(330px);
+}
+.box img:nth-child(2){
+    transform:rotateY(60deg) translateZ(330px);
+}
+.box img:nth-child(3){
+    transform:rotateY(100deg) translateZ(330px);
+}
+.box img:nth-child(4){
+    transform:rotateY(140deg) translateZ(330px);
+}
+.box img:nth-child(5){
+    transform:rotateY(180deg) translateZ(330px);
+}
+.box img:nth-child(6){
+    transform:rotateY(220deg) translateZ(330px);
+}
+.box img:nth-child(7){
+    transform:rotateY(260deg) translateZ(330px);
+}
+.box img:nth-child(8){
+    transform:rotateY(300deg) translateZ(330px);
+}
+.box img:nth-child(9){
+    transform:rotateY(340deg) translateZ(330px);
+}
+  
+.box img:nth-child(1):hover{
+    transform:rotateY(20deg) translateZ(330px) scale(1.2);
+}
+.box img:nth-child(2):hover{
+    transform:rotateY(60deg) translateZ(330px) scale(1.2);
+}
+.box img:nth-child(3):hover{
+    transform:rotateY(100deg) translateZ(330px) scale(1.2);
+}
+.box img:nth-child(4):hover{
+    transform:rotateY(140deg) translateZ(330px) scale(1.2);
+}
+.box img:nth-child(5):hover{
+    transform:rotateY(180deg) translateZ(330px) scale(1.2);
+}
+.box img:nth-child(6):hover{
+    transform:rotateY(220deg) translateZ(330px) scale(1.2);
+}
+.box img:nth-child(7):hover{
+    transform:rotateY(260deg) translateZ(330px) scale(1.2);
+}
+.box img:nth-child(8):hover{
+    transform:rotateY(300deg) translateZ(330px) scale(1.2);
+}
+.box img:nth-child(9):hover{
+    transform:rotateY(340deg) translateZ(330px) scale(1.2);
+}
+  
+@keyframes photo{
+    0%{
+        transform:rotateX(-20deg) rotateY(0deg);
+    }
+    100%{
+        transform:rotateX(-20deg) rotateY(360deg);
+    }
+}
+
+/* ------------------诗歌------------------ */
+#wrapper {
+	width: 1200px;
+    margin:0 auto;	
+}
+.tet{
+    color: #E8B606;
+    margin-bottom: 10px;	
+}
+ 
+#wrapper #box {
+	width: 180px;
+	text-align: center;
+	margin:0 auto;	
+}
