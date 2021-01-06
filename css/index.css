@@ -1,11 +1,35 @@
-body,div,p,ul,ol,li,dl,dt,dd,table,tr,td,form,hr,fieldset,h1,h2,h3,h4,h5,h6,img,input{
-    margin:0;
-    padding:0;
+body,
+div,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+tr,
+td,
+form,
+hr,
+fieldset,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img,
+input {
+    margin: 0;
+    padding: 0;
 }
-html{
+
+html {
     width: 100%;
     height: 100%;
 }
+
 body {
     background-color: #000;
     width: 100%;
@@ -14,24 +38,28 @@ body {
     overflow: hidden;
     /* background: url('../images/9.jpg') no-repeat center center fixed; */
 }
-.content{
+
+.content {
     width: 200px;
     height: 50px;
     position: relative;
-    margin:200px auto 0;
+    margin: 200px auto 0;
     perspective: 1500px;
 }
-.box{
+
+.box {
     width: 200px;
     height: 150px;
     transform-style: preserve-3d;
-    transform:rotateX(-30deg);
-    animation:photo 15s linear infinite;
+    transform: rotateX(-30deg);
+    animation: photo 15s linear infinite;
 }
-.box:hover{
-    animation:photo 15s linear infinite paused;
+
+.box:hover {
+    animation: photo 15s linear infinite paused;
 }
-.box img{
+
+.box img {
     width: 235px;
     height: 200px;
     position: absolute;
@@ -39,84 +67,196 @@ body {
     top: 0;
     transform-style: preserve-3d;
     transition: all 1s;
+    cursor: pointer;
 }
-.box img:nth-child(1){
-    transform:rotateY(20deg) translateZ(330px);
+
+.box img:nth-child(1) {
+    transform: rotateY(20deg) translateZ(330px);
 }
-.box img:nth-child(2){
-    transform:rotateY(60deg) translateZ(330px);
+
+.box img:nth-child(2) {
+    transform: rotateY(60deg) translateZ(330px);
 }
-.box img:nth-child(3){
-    transform:rotateY(100deg) translateZ(330px);
+
+.box img:nth-child(3) {
+    transform: rotateY(100deg) translateZ(330px);
 }
-.box img:nth-child(4){
-    transform:rotateY(140deg) translateZ(330px);
+
+.box img:nth-child(4) {
+    transform: rotateY(140deg) translateZ(330px);
 }
-.box img:nth-child(5){
-    transform:rotateY(180deg) translateZ(330px);
+
+.box img:nth-child(5) {
+    transform: rotateY(180deg) translateZ(330px);
 }
-.box img:nth-child(6){
-    transform:rotateY(220deg) translateZ(330px);
+
+.box img:nth-child(6) {
+    transform: rotateY(220deg) translateZ(330px);
 }
-.box img:nth-child(7){
-    transform:rotateY(260deg) translateZ(330px);
+
+.box img:nth-child(7) {
+    transform: rotateY(260deg) translateZ(330px);
 }
-.box img:nth-child(8){
-    transform:rotateY(300deg) translateZ(330px);
+
+.box img:nth-child(8) {
+    transform: rotateY(300deg) translateZ(330px);
 }
-.box img:nth-child(9){
-    transform:rotateY(340deg) translateZ(330px);
+
+.box img:nth-child(9) {
+    transform: rotateY(340deg) translateZ(330px);
 }
-  
-.box img:nth-child(1):hover{
-    transform:rotateY(20deg) translateZ(330px) scale(1.2);
+
+.box img:nth-child(1):hover {
+    transform: rotateY(20deg) translateZ(330px) scale(1.2);
 }
-.box img:nth-child(2):hover{
-    transform:rotateY(60deg) translateZ(330px) scale(1.2);
+
+.box img:nth-child(2):hover {
+    transform: rotateY(60deg) translateZ(330px) scale(1.2);
 }
-.box img:nth-child(3):hover{
-    transform:rotateY(100deg) translateZ(330px) scale(1.2);
+
+.box img:nth-child(3):hover {
+    transform: rotateY(100deg) translateZ(330px) scale(1.2);
 }
-.box img:nth-child(4):hover{
-    transform:rotateY(140deg) translateZ(330px) scale(1.2);
+
+.box img:nth-child(4):hover {
+    transform: rotateY(140deg) translateZ(330px) scale(1.2);
 }
-.box img:nth-child(5):hover{
-    transform:rotateY(180deg) translateZ(330px) scale(1.2);
+
+.box img:nth-child(5):hover {
+    transform: rotateY(180deg) translateZ(330px) scale(1.2);
 }
-.box img:nth-child(6):hover{
-    transform:rotateY(220deg) translateZ(330px) scale(1.2);
+
+.box img:nth-child(6):hover {
+    transform: rotateY(220deg) translateZ(330px) scale(1.2);
 }
-.box img:nth-child(7):hover{
-    transform:rotateY(260deg) translateZ(330px) scale(1.2);
+
+.box img:nth-child(7):hover {
+    transform: rotateY(260deg) translateZ(330px) scale(1.2);
 }
-.box img:nth-child(8):hover{
-    transform:rotateY(300deg) translateZ(330px) scale(1.2);
+
+.box img:nth-child(8):hover {
+    transform: rotateY(300deg) translateZ(330px) scale(1.2);
 }
-.box img:nth-child(9):hover{
-    transform:rotateY(340deg) translateZ(330px) scale(1.2);
+
+.box img:nth-child(9):hover {
+    transform: rotateY(340deg) translateZ(330px) scale(1.2);
 }
-  
-@keyframes photo{
-    0%{
-        transform:rotateX(-20deg) rotateY(0deg);
+
+@keyframes photo {
+    0% {
+        transform: rotateX(-20deg) rotateY(0deg);
     }
-    100%{
-        transform:rotateX(-20deg) rotateY(360deg);
+
+    100% {
+        transform: rotateX(-20deg) rotateY(360deg);
     }
 }
 
 /* ------------------诗歌------------------ */
 #wrapper {
-	width: 1200px;
-    margin:0 auto;	
+    width: 1200px;
+    margin: 0 auto;
 }
-.tet{
+
+.tet {
     color: #E8B606;
-    margin-bottom: 10px;	
+    margin-bottom: 10px;
+    font-size: 16px;
+    display: none;
+
 }
- 
-#wrapper #box {
-	width: 180px;
-	text-align: center;
-	margin:0 auto;	
+
+#wrapper #text-box {
+    width: 180px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+#h {
+    width: 100%;
+    filter: alpha(opacity=0, style=1)
+}
+
+/* -------------------音乐-------------------- */
+#audio_btn {
+    position: fixed;
+    right: 8px;
+    top: 0;
+    z-index: 200;
+    display: none;
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.play_yinfu {
+    position: fixed;
+    right: 10px;
+    float: right;
+    top: 1px;
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/music.gif");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 60px 60px;
+}
+
+.rotate {
+    position: fixed;
+    right: 10px;
+    float: right;
+    top: 1px;
+    width: 30px;
+    height: 30px;
+    background-size: 100% 100%;
+    background-image: url("../images/music_off.png");
+    -webkit-animation: rotating 1.2s linear infinite;
+    -moz-animation: rotating 1.2s linear infinite;
+    -o-animation: rotating 1.2s linear infinite;
+    animation: rotating 1.2s linear infinite;
+}
+
+
+@-webkit-keyframes rotating {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes rotating {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+.off {
+    position: fixed;
+    right: 10px;
+    float: right;
+    top: 1px;
+    background-size: 100% 100%;
+    background-image: url("../images/music_no.png");
+    background-repeat: no-repeat;
+    background-position: center center;
 }

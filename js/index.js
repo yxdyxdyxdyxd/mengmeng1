@@ -71,31 +71,133 @@
     // ------------------------------相册--------------------------------------
     let img = document.getElementsByClassName('img')
     let bodyEle = document.getElementsByTagName('body')
-    let isOnclick = false
-    let surprise=[]
+    let surprise = []
+    let backSrc = 'none'
     for (let i = 0; i < img.length; i++) {
         img[i].onmouseover = function () {
-            if (!isOnclick) {
-                bodyEle[0].style.background = "url(" + img[i].attributes['src'].value + ") no-repeat center center fixed";
-            }
-
+            bodyEle[0].style.background = "url(" + img[i].attributes['src'].value + ") no-repeat center center fixed";
         }
         img[i].onmouseout = function () {
-            if (!isOnclick) {
+            if (backSrc !== 'none') {
+                bodyEle[0].style.background = "url(" + backSrc + ") no-repeat center center fixed";
+                bodyEle[0].style.backgroundColor = '#fff'
+            } else {
                 bodyEle[0].style.background = 'none'
                 bodyEle[0].style.backgroundColor = '#000'
             }
 
+
         }
         img[i].onclick = function () {
             bodyEle[0].style.background = "url(" + img[i].attributes['src'].value + ") no-repeat center center fixed";
-            isOnclick = true
+            backSrc = img[i].attributes['src'].value
             surprise.push(i)
-            console.log(surprise.join(''))
-            if(surprise.join('')==='20201227'){
-                console.log('surprise')
+            $('#media')[0].pause();
+            let musicSrc = ''
+            switch (i) {
+                case 0:
+                    musicSrc = './music/yilu.mp3'
+                    break;
+                case 1:
+                    musicSrc = './music/chun.mp3'
+                    break;
+                case 2:
+                    musicSrc = './music/qian.mp3'
+                    break;
+                case 3:
+                    musicSrc = './music/xia.mp3'
+                    break;
+                case 4:
+                    musicSrc = './music/gao.mp3'
+                    break;
+                case 5:
+                    musicSrc = './music/guowang.mp3'
+                    break;
+                case 6:
+                    musicSrc = './music/manman.mp3'
+                    break;
+                case 7:
+                    musicSrc = './music/jie.mp3'
+                    break;
+                case 8:
+                    musicSrc = './music/ye.mp3'
+                    break;
+                default:
+                    break;
+            }
+            $('#media').attr('src', musicSrc);
+            $("#media")[0].play()
+            if (surprise.join('') === '20201227') {
+                $('.box').remove()
+                poetry()
+
             }
 
         }
     }
+
+    function poetry() {
+        let time = 0
+        let text = '从樱花飘，到枫叶落'
+      let intervalNamel=  setInterval(() => {
+            time++
+            switch (time) {
+                case 1:
+                    text = '陪你走过一个个春夏秋冬'
+                    break;
+                case 2:
+                    text = '春风十里不如你'
+                    break;
+                case 3:
+                    text = '绚丽落魄都陪你'
+                    break;
+                case 4:
+                    text = '我在等风也等你'
+                    break;
+                case 5:
+                    text = '草木有阳光和水'
+                    break;
+                case 6:
+                    text = '风筝有清风和绳'
+                    break;
+                case 7:
+                    text = '我有余生还有你'
+                    break;
+                case 8:
+                    text = '从秋风送梦'
+                    break;
+                case 9:
+                    text = '美梦佳梦与好梦'
+                    break;
+                case 10:
+                    text = '想为你做一副画'
+                    break;
+                case 11:
+                    text = '以心为笔'
+                    break;
+                case 12:
+                    text = '以情为墨'
+                    break;
+                case 13:
+                    text = '以爱你为内容'
+                    break;
+                case 14:
+                    text = '以余生为落笔'
+                    break;
+                default:
+                    break;
+            }
+            $('#text-box').append(`<p class="tet">${text}</p>`);
+            $('.tet').fadeIn(2000)
+            if(time>13){
+                clearInterval(intervalNamel);
+            }
+        }, 2000);
+    }
+    // -----------------------------音乐-------------------------
+    let audio = $('#media');
+    $("#audio_btn").bind('click', function () {
+        $(this).hasClass("off") ? ($(this).addClass("play_yinfu").removeClass("off"), $("#yinfu").addClass("rotate"), $("#media")[0].play()) : ($(this).addClass("off").removeClass("play_yinfu"), $("#yinfu").removeClass("rotate"),
+            $("#media")[0].pause());
+    });
 })()
