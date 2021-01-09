@@ -42,7 +42,7 @@ body {
 .content {
     width: 200px;
     height: 50px;
-    margin: 200px auto 0;
+    margin: 600px auto 0;
     perspective: 1500px;
 }
 
@@ -52,10 +52,6 @@ body {
     transform-style: preserve-3d;
     transform: rotateX(-30deg);
     animation: photo 15s linear infinite;
-}
-
-.box:hover {
-    animation: photo 15s linear infinite paused;
 }
 
 .box img {
@@ -105,41 +101,6 @@ body {
     transform: rotateY(340deg) translateZ(330px);
 }
 
-.box img:nth-child(1):hover {
-    transform: rotateY(20deg) translateZ(330px) scale(1.2);
-}
-
-.box img:nth-child(2):hover {
-    transform: rotateY(60deg) translateZ(330px) scale(1.2);
-}
-
-.box img:nth-child(3):hover {
-    transform: rotateY(100deg) translateZ(330px) scale(1.2);
-}
-
-.box img:nth-child(4):hover {
-    transform: rotateY(140deg) translateZ(330px) scale(1.2);
-}
-
-.box img:nth-child(5):hover {
-    transform: rotateY(180deg) translateZ(330px) scale(1.2);
-}
-
-.box img:nth-child(6):hover {
-    transform: rotateY(220deg) translateZ(330px) scale(1.2);
-}
-
-.box img:nth-child(7):hover {
-    transform: rotateY(260deg) translateZ(330px) scale(1.2);
-}
-
-.box img:nth-child(8):hover {
-    transform: rotateY(300deg) translateZ(330px) scale(1.2);
-}
-
-.box img:nth-child(9):hover {
-    transform: rotateY(340deg) translateZ(330px) scale(1.2);
-}
 
 @keyframes photo {
     0% {
