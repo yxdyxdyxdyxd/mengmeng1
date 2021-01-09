@@ -34,8 +34,11 @@ body {
     background-color: #000;
     width: 100%;
     height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
     /*防止出现向下滚动条*/
-    overflow: hidden;
+    /* overflow: hidden; */
     /* background: url('../images/9.jpg') no-repeat center center fixed; */
 }
 
