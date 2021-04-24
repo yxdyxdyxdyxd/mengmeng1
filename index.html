@@ -20,14 +20,74 @@
 		}
 
 		.title-day {
-			font-size: 20px;
-			color: chocolate;
+			font-family: 'Rubik';
+			font-size: 4rem;
+			font-weight: 900;
+			letter-spacing: .04em;
+			display: block;
+			word-spacing: 3rem;
+			line-height: 1.4;
+			text-transform: uppercase;
+		}
+
+		.title-day div {
+			display: inline;
+		}
+
+		.title-day span {
+			display: inline-block;
+		}
+
+		.title-day span:hover {
+			animation: wobble 200ms;
+		}
+
+		.title-day span:nth-child(1n) {
+			color: #F18829;
+			text-shadow: #ef7b11 1px 1px, #f7bd89 -1px -1px, #f37841 -2px -2px 6px, #f49d4f -2px -2px, #f49d4f -1px -2px, #f49d4f -1px -3px, #f49d4f -2px -4px, #f49d4f -2px -5px, #f49d4f -3px -6px, #F18829 -4px -7px, rgba(0, 0, 5, 0.4) 3px 4px 5px, rgba(0, 0, 5, 0.2) -3px -4px 5px;
+			transform: rotate(-3deg);
+		}
+
+		.title-day span:nth-child(2n) {
+			color: #00B9ED;
+			text-shadow: #00a5d4 1px 1px, #54d9ff -1px -1px, #08f2ff -2px -2px 6px, #17ccff -2px -2px, #17ccff -1px -2px, #17ccff -1px -3px, #17ccff -2px -4px, #17ccff -2px -5px, #17ccff -3px -6px, #00B9ED -4px -7px, rgba(0, 0, 5, 0.4) 3px 4px 5px, rgba(0, 0, 5, 0.2) -3px -4px 5px;
+			transform: rotate(3deg) translateY(4%);
+		}
+
+		.title-day span:nth-child(3n) {
+			color: #ED5053;
+			text-shadow: #eb393c 1px 1px, #f7acae -1px -1px, #ef6780 -2px -2px 6px, #f17577 -2px -2px, #f17577 -1px -2px, #f17577 -1px -3px, #f17577 -2px -4px, #f17577 -2px -5px, #f17577 -3px -6px, #ED5053 -4px -7px, rgba(0, 0, 5, 0.4) 3px 4px 5px, rgba(0, 0, 5, 0.2) -3px -4px 5px;
+			transform: rotate(-3deg);
+		}
+
+		.title-day span:nth-child(4n) {
+			color: #00AF4F;
+			text-shadow: #009643 1px 1px, #16ff7f -1px -1px, #00c939 -2px -2px 6px, #00d861 -2px -2px, #00d861 -1px -2px, #00d861 -1px -3px, #00d861 -2px -4px, #00d861 -2px -5px, #00d861 -3px -6px, #00AF4F -4px -7px, rgba(0, 0, 5, 0.4) 3px 4px 5px, rgba(0, 0, 5, 0.2) -3px -4px 5px;
+			transform: rotate(-2deg);
+		}
+
+		.title-day span:nth-child(5n) {
+			color: #8E509F;
+			text-shadow: #7f478e 1px 1px, #ba8fc6 -1px -1px, #8e5cad -2px -2px 6px, #a266b2 -2px -2px, #a266b2 -1px -2px, #a266b2 -1px -3px, #a266b2 -2px -4px, #a266b2 -2px -5px, #a266b2 -3px -6px, #8E509F -4px -7px, rgba(0, 0, 5, 0.4) 3px 4px 5px, rgba(0, 0, 5, 0.2) -3px -4px 5px;
+			transform: rotate(3deg) translateY(-2%);
+		}
+
+		.title-day span:nth-child(6n) {
+			color: #F9DE00;
+			text-shadow: #e0c700 1px 1px, #ffee60 -1px -1px, #ffbe14 -2px -2px 6px, #ffe723 -2px -2px, #ffe723 -1px -2px, #ffe723 -1px -3px, #ffe723 -2px -4px, #ffe723 -2px -5px, #ffe723 -3px -6px, #F9DE00 -4px -7px, rgba(0, 0, 5, 0.4) 3px 4px 5px, rgba(0, 0, 5, 0.2) -3px -4px 5px;
+			transform: rotate(5deg) translateY(1%);
+		}
+
+		@keyframes wobble {
+			50% {
+				transform: translate(2%, 2%);
+			}
 		}
 	</style>
 </head>
 
 <body>
-	<h3 class="title-day">我们在一起21天啦</h3>
+	<h3 class="title-day"></h3>
 	<div class="content">
 		<div class="box">
 			<img class="img" src="images/1.jpg" alt="" />
@@ -59,12 +119,12 @@
 <script src="./js/index.js"></script>
 <!-- 花瓣js -->
 <script type="text/javascript">
-	var huaban =
+	let huaban =
 		"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAWCAYAAAC2ew6NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowMTgwMTE3NDA3MjA2ODExODIyQUY2RkM2MzQ2NTcyNyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyQ0M3NzgwODI4QkQxMUU4QTk1N0QwMEMxRjNFMzNEMyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoyQ0M3NzgwNzI4QkQxMUU4QTk1N0QwMEMxRjNFMzNEMyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDE4MDExNzQwNzIwNjgxMTgyMkFGNkZDNjM0NjU3MjciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDE4MDExNzQwNzIwNjgxMTgyMkFGNkZDNjM0NjU3MjciLz4gPC9yZGY6RGVzY3Jp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"
 </script>
 <script src="./js/petalfloat.js"></script>
 <script type="text/javascript">
-	var pf = new PF({
+	let pf = new PF({
 		life: 60,
 	});
 	pf.init();
@@ -78,12 +138,46 @@
 <script>
 	let loveDate = new Date(2021, 3, 3).getTime();
 	let title = document.getElementsByClassName('title-day')
-	setInterval(() => {
+
+	function dataFn() {
 		let nowDate = new Date().getTime();
 		let togetherDate = nowDate - loveDate
 		let day = Math.floor(togetherDate / (1000 * 60 * 60 * 24));
-		title[0].innerText = '我们在一起'+day+'天啦'
+		title[0].innerText = '在一起' + day + '天dm'
+		let content = title[0].innerText;
+		formatContent(content, title[0]);
+	}
+	dataFn()
+	setInterval(() => {
+		dataFn()
 	}, 1000);
+
+	function formatContent(content, title) {
+		let contentArray = content.split(' ');
+		let formattedContent = document.createElement('div');
+		contentArray.map(function (word) {
+			formattedContent.appendChild(createWord(word));
+		});
+
+		title.replaceChild(formattedContent, title.firstChild);
+	};
+
+	function createWord(characters) {
+		let word = document.createElement('div');
+		let wordArray = characters.split('');
+		wordArray.map(function (char) {
+			word.appendChild(formatCharacter(char));
+		});
+		word.appendChild(formatCharacter(' '));
+		return word;
+	}
+
+	function formatCharacter(text) {
+		var text = text === ' ' ? ' ' : text;
+		let character = document.createElement('span');
+		character.innerHTML = text;
+		return character;
+	}
 </script>
 
 </html>
